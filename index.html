@@ -4,80 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>William Kamkwamba - The Boy Who Harnessed the Wind</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-    <div class="container">
-        
-        <header>
-            <h1>William Kamkwamba</h1>
-            <p class="subtitle">The Boy Who Harnessed the Wind</p>
-        </header>
+    <div class="main-wrapper">
+        <div class="container">
+            
+            <header>
+                <h1>William Kamkwamba</h1>
+                <p class="subtitle">"The Boy Who Harnessed the Wind"</p>
+                <div class="separator"></div>
+            </header>
 
-        <nav class="navigation">
-            <button onclick="showSection('family')" class="active-btn" id="btn-family">Family Background</button>
-            <button onclick="showSection('situation')" id="btn-situation">Situation</button>
-            <button onclick="showSection('problem')" id="btn-problem">Problem</button>
-            <button onclick="showSection('solution')" id="btn-solution">Solution</button>
-            <button onclick="showSection('inspiration')" id="btn-inspiration">Future Inspiration</button>
-        </nav>
+            <nav class="navigation">
+                <button onclick="showSection('family')" class="active-btn" id="btn-family">Family Background</button>
+                <button onclick="showSection('situation')" id="btn-situation">Situation</button>
+                <button onclick="showSection('problem')" id="btn-problem">Problem</button>
+                <button onclick="showSection('solution')" id="btn-solution">Solution</button>
+                <button onclick="showSection('inspiration')" id="btn-inspiration">Future Inspiration</button>
+            </nav>
 
-        <main class="content-area">
+            <main class="content-area">
 
-            <section id="family" class="content-section">
-                <h2>Family Background</h2>
-                <img src="family.jpg" alt="William's Family and Home" class="topic-img">
-                <p>
-                    William Kamkwamba was born on August 5th, 1987, in Dowa, Malawi, to Trywell and Agnes Kamkwamba. 
-                    He is the oldest of seven children. His family relied on subsistence by agriculture in addition, 
-                    they used to live in a small village with limited access to electricity, clean water and education.
-                </p>
-            </section>
+                <section id="family" class="content-section fade-in">
+                    <div class="text-content">
+                        <h2>Family Background</h2>
+                        <p>
+                            William Kamkwamba was born on August 5th, 1987, in Dowa, Malawi, to Trywell and Agnes Kamkwamba. 
+                            He is the oldest of seven children. His family relied on subsistence by agriculture in addition, 
+                            they used to live in a small village with limited access to electricity, clean water and education.
+                        </p>
+                    </div>
+                    <div class="image-content">
+                        <img src="family.jpg" alt="William's Family" class="topic-img">
+                    </div>
+                </section>
 
-            <section id="situation" class="content-section hidden">
-                <h2>The Situation</h2>
-                <img src="situation.jpeg" alt="Drought conditions in Malawi" class="topic-img">
-                <p>
-                    In 2001, the place where he used to live was hit by a severe drought, which led to a famine 
-                    that affected all the town. William's family was forced to drop out of school at the age of 14 
-                    to help support his family. The village was plagued by poverty, hunger, and lack of access to basic 
-                    necessities like water and electricity.
-                </p>
-            </section>
+                <section id="situation" class="content-section hidden fade-in">
+                    <div class="text-content">
+                        <h2>The Situation</h2>
+                        <p>
+                            In 2001, the place where he used to live was hit by a severe drought, which led to a famine 
+                            that affected all the town. William's family was forced to drop out of school at the age of 14 
+                            to help support his family. The village was plagued by poverty, hunger, and lack of access to basic 
+                            necessities like water and electricity.
+                        </p>
+                    </div>
+                    <div class="image-content">
+                        <img src="situation.jpeg" alt="Drought context" class="topic-img">
+                    </div>
+                </section>
 
-            <section id="problem" class="content-section hidden">
-                <h2>The Problem</h2>
-                <img src="problem.jpg" alt="Struggle for electricity and water" class="topic-img">
-                <p>
-                    The drought had dried up the villages water sources making it difficult for his family and neighbors 
-                    to access clean water. The few electricity made it hard for the village to irrigate their crops leading 
-                    to food shortages and economics hardship.
-                </p>
-            </section>
+                <section id="problem" class="content-section hidden fade-in">
+                    <div class="text-content">
+                        <h2>The Problem</h2>
+                        <p>
+                            The drought had dried up the villages water sources making it difficult for his family and neighbors 
+                            to access clean water. The few electricity made it hard for the village to irrigate their crops leading 
+                            to food shortages and economics hardship.
+                        </p>
+                    </div>
+                    <div class="image-content">
+                        <img src="problem.jpg" alt="Water scarcity" class="topic-img">
+                    </div>
+                </section>
 
-            <section id="solution" class="content-section hidden">
-                <h2>The Solution</h2>
-                <img src="solution.jpg" alt="The Windmill Prototype" class="topic-img">
-                <p>
-                    William discovered a book called "Using Energy" in his village's library which inspired to build a wind 
-                    using scrap materials. Several months experimenting and testing were spent by him to eventually building a 
-                    functional windmill generated electricity and pumped water for his family. The windmill was a huge 
-                    success and williams neighbors began to ask for his help in building their own windmills.
-                </p>
-            </section>
+                <section id="solution" class="content-section hidden fade-in">
+                    <div class="text-content">
+                        <h2>The Solution</h2>
+                        <p>
+                            William discovered a book called "Using Energy" in his village's library which inspired to build a wind 
+                            using scrap materials. Several months experimenting and testing were spent by him to eventually building a 
+                            functional windmill generated electricity and pumped water for his family. The windmill was a huge 
+                            success and williams neighbors began to ask for his help in building their own windmills.
+                        </p>
+                    </div>
+                    <div class="image-content">
+                        <img src="solution.jpg" alt="The Windmill" class="topic-img">
+                    </div>
+                </section>
 
-            <section id="inspiration" class="content-section hidden">
-                <h2>Inspiration to Future Generations</h2>
-                <img src="inspiration.jpg" alt="William teaching others" class="topic-img">
-                <p>
-                    (Waiting for text...) Here we will add the conclusion and legacy, mentioning his TED talks and education.
-                </p>
-            </section>
+                <section id="inspiration" class="content-section hidden fade-in">
+                    <div class="text-content">
+                        <h2>Inspiration to Future Generations</h2>
+                        <p>
+                            (Waiting for text...) Here we will add the conclusion and legacy.
+                        </p>
+                    </div>
+                    <div class="image-content">
+                        <img src="inspiration.jpg" alt="Future legacy" class="topic-img">
+                    </div>
+                </section>
 
-        </main>
+            </main>
+        </div>
     </div>
 
     <script src="js/script.js"></script>
 </body>
+</html>
 </html>
