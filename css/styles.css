@@ -1,9 +1,102 @@
-body {
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding-top: 50px;
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-h1 {
+
+body {
+    font-family: 'Georgia', serif; /* Fuente seria y legible */
+    background-color: #f4f1ea; /* Tono papel antiguo/tierra clara */
     color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 40px 0;
+    border-bottom: 3px solid #6b8cce; /* Azul "viento" */
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    color: #7f8c8d;
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+/* Navigation Buttons */
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+button {
+    background-color: #5d4037; /* Marrón madera/tierra */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    transition: background 0.3s ease;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #8d6e63; /* Un tono más claro al pasar el mouse */
+}
+
+/* Estilo para el botón activo */
+button.active-btn {
+    background-color: #6b8cce; /* Azul para indicar selección */
+    font-weight: bold;
+}
+
+/* Content Area */
+.content-area {
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+}
+
+.topic-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+h2 {
+    color: #2c3e50;
+    border-left: 5px solid #6b8cce;
+    padding-left: 15px;
+    margin-bottom: 15px;
+}
+
+/* Clase utilitaria para ocultar secciones */
+.hidden {
+    display: none;
 }
