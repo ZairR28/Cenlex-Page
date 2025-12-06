@@ -6,97 +6,152 @@
 }
 
 body {
-    font-family: 'Georgia', serif; /* Fuente seria y legible */
-    background-color: #f4f1ea; /* Tono papel antiguo/tierra clara */
+    /* Fondo general de la página: Un tono arena/grisáceo serio */
+    background-color: #e8e6e1; 
+    font-family: 'Open Sans', sans-serif;
     color: #333;
-    line-height: 1.6;
+    line-height: 1.8;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
+/* Contenedor tipo "Tarjeta" o "Hoja de papel" */
 .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
     background-color: #fff;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    min-height: 100vh;
+    width: 100%;
+    max-width: 900px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* Sombra elegante */
+    border-top: 8px solid #a67c52; /* Borde superior color tierra/madera */
 }
 
 /* Header */
 header {
     text-align: center;
-    padding: 40px 0;
-    border-bottom: 3px solid #6b8cce; /* Azul "viento" */
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 header h1 {
-    font-size: 2.5em;
+    font-family: 'Merriweather', serif; /* Fuente con serifa elegante */
+    font-size: 2.8em;
     color: #2c3e50;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    margin-bottom: 10px;
 }
 
 .subtitle {
-    color: #7f8c8d;
+    font-family: 'Merriweather', serif;
+    color: #6c757d;
     font-style: italic;
     font-size: 1.2em;
 }
 
-/* Navigation Buttons */
+.separator {
+    width: 60px;
+    height: 4px;
+    background-color: #6b8cce; /* Azul cielo */
+    margin: 20px auto;
+    border-radius: 2px;
+}
+
+/* Navegación (Botones) */
 .navigation {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
 }
 
 button {
-    background-color: #5d4037; /* Marrón madera/tierra */
-    color: white;
-    border: none;
-    padding: 12px 20px;
+    background-color: transparent;
+    color: #555;
+    border: 2px solid #ddd;
+    padding: 10px 20px;
     cursor: pointer;
-    font-size: 16px;
-    font-family: 'Arial', sans-serif;
-    transition: background 0.3s ease;
-    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-radius: 30px; /* Botones redondos tipo "pastilla" */
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 button:hover {
-    background-color: #8d6e63; /* Un tono más claro al pasar el mouse */
+    border-color: #a67c52;
+    color: #a67c52;
 }
 
-/* Estilo para el botón activo */
+/* Estilo botón activo */
 button.active-btn {
-    background-color: #6b8cce; /* Azul para indicar selección */
-    font-weight: bold;
+    background-color: #a67c52;
+    border-color: #a67c52;
+    color: white;
+    box-shadow: 0 4px 10px rgba(166, 124, 82, 0.3);
 }
 
-/* Content Area */
-.content-area {
-    padding: 20px;
-    border: 1px solid #ddd;
-    background-color: #fafafa;
+/* Área de contenido */
+.content-section {
+    display: flex;
+    flex-direction: column; /* En móviles una debajo de otra */
+    gap: 30px;
+    align-items: center;
 }
 
-.topic-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-    border: 5px solid #fff;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+/* Pantallas grandes: Texto a un lado, imagen al otro */
+@media (min-width: 768px) {
+    .content-section {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .text-content {
+        flex: 1;
+    }
+    .image-content {
+        flex: 1;
+    }
 }
 
 h2 {
+    font-family: 'Merriweather', serif;
     color: #2c3e50;
-    border-left: 5px solid #6b8cce;
-    padding-left: 15px;
-    margin-bottom: 15px;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+    display: inline-block;
 }
 
-/* Clase utilitaria para ocultar secciones */
+.topic-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.topic-img:hover {
+    transform: scale(1.02); /* Efecto zoom suave al pasar mouse */
+}
+
+/* Utilidades y Animaciones */
 .hidden {
     display: none;
+}
+
+/* Animación de entrada suave */
+.fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
